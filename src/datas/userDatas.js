@@ -7,5 +7,6 @@ export const userDatas = [
     profilepicture:
       'https://staticg.sportskeeda.com/editor/2023/01/107fa-16729479671931-1920.jpg',
     tokens: 0,
+    description: 'so fucking handsome omfg',
   },
 ];
