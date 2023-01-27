@@ -3,6 +3,8 @@ import './default.scss';
 import { useNavigate, Outlet } from 'react-router-dom';
 import { useEffect } from 'react';
 
+import Header from './components/Header/Header'
+
 function App() {
   const navigate = useNavigate();
   useEffect(() => {
@@ -21,6 +23,7 @@ function App() {
   }, []);
   return (
     <div className='App'>
+      <Header />
       <Outlet />
     </div>
   );
