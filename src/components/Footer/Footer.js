@@ -10,7 +10,7 @@ export default function Footer() {
     <div className={styles.footer}>
       <div className={styles.footer_text}>
         <p onClick={() => setLink1(!link1)}>
-          Informations et contact<i className='fa-solid fa-caret-down'></i>
+          Information & Contact<i className='fa-solid fa-caret-down'></i>
         </p>
         {link1 && (
           <>
@@ -21,16 +21,16 @@ export default function Footer() {
           </>
         )}
         <p onClick={() => setLink2(!link2)}>
-          En savoir plus<i className='fa-solid fa-caret-down'></i>
+          More information<i className='fa-solid fa-caret-down'></i>
         </p>
         {link2 && (
           <>
             <Link>Merciki in the news</Link>
-            <Link>Terms and conditions of use</Link>
+            <Link>Terms & conditions of use</Link>
           </>
         )}
         <p onClick={() => setLink3(!link3)}>
-          Mon Merciki<i className='fa-solid fa-caret-down'></i>
+          My Merciki<i className='fa-solid fa-caret-down'></i>
         </p>
         {link3 && (
           <>
