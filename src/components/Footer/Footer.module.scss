@@ -1,0 +1,38 @@
+@import '../../assets/styles/variables';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: $green;
+  align-items: center;
+  padding: 2rem;
+  &_text {
+    display: flex;
+    flex-direction: column;
+    font-family: $Poppins;
+    font-weight: 500;
+    align-items: center;
+    & p {
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      color: $white;
+      font-size: 1.5rem;
+      user-select: none;
+      cursor: pointer;
+      & i {
+        display: none;
+        margin: .15rem 0 0 .5rem;
+      }
+      &:hover i {
+        display: block;
+      }
+    }
+    & a {
+      text-decoration: none;
+      color: $darkWhite;
+      font-weight: 400;
+    }
+  }
+}

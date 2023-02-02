@@ -1,23 +1,45 @@
 import styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Footer() {
+  const [link1, setLink1] = useState(false);
+  const [link2, setLink2] = useState(false);
+  const [link3, setLink3] = useState(false);
   return (
     <div className={styles.footer}>
       <div className={styles.footer_text}>
-        <p>Informations et contact</p>
-        <a href='http://' target='_blank'>
-          info@merciki.be
-        </a>
-        <Link>Formulaire de contact</Link>
-        <p>En savoir plus</p>
-        <Link>Questions fréquentes</Link>
-        <Link>Merciki dans la presse</Link>
-        <Link>Conditions d'utilisation</Link>
-        <Link>Règlement relatif à la vie privée</Link>
-        <p>Mon Merciki</p>
-        <Link>S'inscrire</Link>
-        <Link>Se connecter</Link>
+        <p onClick={() => setLink1(!link1)}>
+          Informations et contact<i className='fa-solid fa-caret-down'></i>
+        </p>
+        {link1 && (
+          <>
+            <a href='http://' target='_blank'>
+              info@merciki.be
+            </a>
+            <Link>Formulaire de contact</Link>
+          </>
+        )}
+        <p onClick={() => setLink2(!link2)}>
+          En savoir plus<i className='fa-solid fa-caret-down'></i>
+        </p>
+        {link2 && (
+          <>
+            <Link>Questions fréquentes</Link>
+            <Link>Merciki dans la presse</Link>
+            <Link>Conditions d'utilisation</Link>
+            <Link>Règlement relatif à la vie privée</Link>
+          </>
+        )}
+        <p onClick={() => setLink3(!link3)}>
+          Mon Merciki<i className='fa-solid fa-caret-down'></i>
+        </p>
+        {link3 && (
+          <>
+            <Link>S'inscrire</Link>
+            <Link>Se connecter</Link>
+          </>
+        )}
       </div>
       <div className={styles.footer_icons}></div>
     </div>

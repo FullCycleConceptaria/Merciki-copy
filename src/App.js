@@ -4,6 +4,7 @@ import { useNavigate, Outlet } from 'react-router-dom';
 import { useEffect } from 'react';
 
 import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer';
 
 function App() {
   const navigate = useNavigate();
@@ -25,6 +26,7 @@ function App() {
     <div className='App'>
       <Header />
       <Outlet />
+      <Footer />
     </div>
   );
 }
