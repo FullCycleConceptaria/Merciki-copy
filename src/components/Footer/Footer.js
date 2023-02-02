@@ -10,7 +10,15 @@ export default function Footer() {
     <div className={styles.footer}>
       <div className={styles.footer_text}>
         <p onClick={() => setLink1(!link1)}>
-          Information & Contact<i className='fa-solid fa-caret-down'></i>
+          Information & Contact
+          <i
+            className='fa-solid fa-caret-down'
+            style={
+              link1
+                ? { transform: 'rotate(180deg)' }
+                : { transform: 'rotate(0)' }
+            }
+          ></i>
         </p>
         {link1 && (
           <>
@@ -21,7 +29,15 @@ export default function Footer() {
           </>
         )}
         <p onClick={() => setLink2(!link2)}>
-          More information<i className='fa-solid fa-caret-down'></i>
+          More information
+          <i
+            className='fa-solid fa-caret-down'
+            style={
+              link2
+                ? { transform: 'rotate(180deg)' }
+                : { transform: 'rotate(0)' }
+            }
+          ></i>
         </p>
         {link2 && (
           <>
@@ -30,11 +46,19 @@ export default function Footer() {
           </>
         )}
         <p onClick={() => setLink3(!link3)}>
-          My Merciki<i className='fa-solid fa-caret-down'></i>
+          My Merciki
+          <i
+            className='fa-solid fa-caret-down'
+            style={
+              link3
+                ? { transform: 'rotate(180deg)' }
+                : { transform: 'rotate(0)' }
+            }
+          ></i>
         </p>
         {link3 && (
           <>
-            <Link>Sign in</Link>
+            <Link>Sign up</Link>
             <Link>Log in</Link>
           </>
         )}

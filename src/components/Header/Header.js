@@ -32,7 +32,7 @@ export default function Header(){
             <Link className={styles.black}>Groups</Link>
           </div>
           <div className={styles.header_menu_bot}>
-            <Link className={styles.header_menu_bot_signUp}>Sign in</Link>
+            <Link className={styles.header_menu_bot_signUp}>Sign up</Link>
             <Link className={styles.header_menu_bot_signIn}>Log in</Link>
           </div>
         </div>
