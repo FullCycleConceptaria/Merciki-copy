@@ -17,7 +17,7 @@ export default function Footer() {
             <a href='http://' target='_blank'>
               info@merciki.be
             </a>
-            <Link>Formulaire de contact</Link>
+            <Link>Contact</Link>
           </>
         )}
         <p onClick={() => setLink2(!link2)}>
@@ -25,10 +25,8 @@ export default function Footer() {
         </p>
         {link2 && (
           <>
-            <Link>Questions fréquentes</Link>
-            <Link>Merciki dans la presse</Link>
-            <Link>Conditions d'utilisation</Link>
-            <Link>Règlement relatif à la vie privée</Link>
+            <Link>Merciki in the news</Link>
+            <Link>Terms and conditions of use</Link>
           </>
         )}
         <p onClick={() => setLink3(!link3)}>
@@ -36,8 +34,8 @@ export default function Footer() {
         </p>
         {link3 && (
           <>
-            <Link>S'inscrire</Link>
-            <Link>Se connecter</Link>
+            <Link>Sign in</Link>
+            <Link>Log in</Link>
           </>
         )}
       </div>

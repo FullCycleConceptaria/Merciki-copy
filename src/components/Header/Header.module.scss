@@ -1,9 +1,9 @@
 @import '../../assets/styles/variables';
 
 .header {
-  width: 100%;
+  width: 45rem;
   height: 6rem;
-  position: relative;
+  position: fixed;
   &_main {
     display: flex;
     align-items: center;

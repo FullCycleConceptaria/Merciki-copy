@@ -29,7 +29,7 @@ export default function Header(){
           <div className={styles.header_menu_top}>
             <Link className={styles.black}>Items</Link>
             <Link className={styles.black}>Services</Link>
-            <Link className={styles.black}>Groupes</Link>
+            <Link className={styles.black}>Groups</Link>
           </div>
           <div className={styles.header_menu_bot}>
             <Link className={styles.header_menu_bot_signUp}>Sign in</Link>
