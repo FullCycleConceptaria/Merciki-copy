@@ -1,51 +1,82 @@
 @import '../../assets/styles/variables';
 
-.header{
+.header {
+  width: 100%;
+  height: 6rem;
+  position: relative;
+  &_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    height: 6%;
-    position: relative;
-    &_main{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
-        background-color: $white;
-        padding: 0px 15px 0px 15px;
-        & p{
-            font-weight: 600;
-            font-size: 2rem;
-        }
-        & i:hover{
-            cursor: pointer;
-        }
+    height: 100%;
+    background-color: $white;
+    padding: 0 1.5rem 0 1.5rem;
+    & p {
+      font-weight: 600;
+      font-size: 2rem;
     }
-    &_menu{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-        background-color: $white;
-        padding: 0px 15px 0px 15px;
-        transition: all .5s;
-        & a{
-            text-decoration: none;
-            color: $black;
-            font-weight: 500;
-            font-size: 1.5rem;
-            transition: all .2s;
-        }
-        &_signup{
-            padding: 10px;
-            background-color: $green;
-            border-radius: 100px;
-        }
-        &_signin{
-            padding: 10px;
-            background-color: $blue;
-            border-radius: 100px;
-        }
+    & i {
+      cursor: pointer;
     }
+  }
+  &_menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: $white;
+    padding: 0 1.5rem 0 1.5rem;
+    transition: all 0.5s;
+    overflow: hidden;
+    font-family: $Poppins;
+    & a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 2rem;
+      transition: all 0.5s;
+    }
+    &_top {
+      margin-top: 1rem;
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      & a {
+        color: $black;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    &_bot {
+      margin: 2rem 0;
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      &_signUp {
+        width: 13rem;
+        text-align: center;
+        padding: 0.5rem 0.7rem;
+        background-color: $green;
+        border-radius: 0.5rem;
+        color: $white;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+      &_signIn {
+        width: 13rem;
+        text-align: center;
+        padding: 0.5rem 0.7rem;
+        background-color: $blue;
+        border-radius: 0.5rem;
+        color: $white;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
 }

@@ -18,21 +18,25 @@
       flex-direction: row;
       text-decoration: none;
       color: $white;
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       user-select: none;
       cursor: pointer;
       & i {
         display: none;
-        margin: .15rem 0 0 .5rem;
+        margin: .35rem 0 0 .5rem;
       }
       &:hover i {
         display: block;
       }
     }
     & a {
+      font-size: 1.5rem;
       text-decoration: none;
-      color: $darkWhite;
-      font-weight: 400;
+      color: $lightGreen;
+      font-weight: 500;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

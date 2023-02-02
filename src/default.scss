@@ -18,10 +18,16 @@ body {
   display: flex;
   justify-content: center;
   background-color: rgb(45, 45, 45);
+  overflow: hidden;
 }
 
 .App {
+  position: relative;
   width: 450px;
   height: 100%;
   background-color: $grey;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

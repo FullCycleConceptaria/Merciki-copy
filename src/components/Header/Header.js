@@ -4,19 +4,38 @@ import styles from './Header.module.scss'
 
 export default function Header(){
     const [menu, setMenu] = useState(false)
-    return(
-        <div className={styles.header}>
-            <div className={styles.header_main}>
-                <p>Merciki</p>
-                <i className="fa-solid fa-bars fa-2xl" onClick={() => setMenu(!menu)}></i>
-            </div>
-            <div className={styles.header_menu} style={menu ? {height: '300%'} : {height: '0%'}}>
-                <Link style={menu ? {opacity: '1'} : {opacity: '0'}}>Objets</Link>
-                <Link style={menu ? {opacity: '1'} : {opacity: '0'}}>Services</Link>
-                <Link style={menu ? {opacity: '1'} : {opacity: '0'}}>Groupes</Link>
-                <Link className={styles.header_menu_signup} style={menu ? {opacity: '1'} : {opacity: '0'}}>S'inscrire</Link>
-                <Link className={styles.header_menu_signin} style={menu ? {opacity: '1'} : {opacity: '0'}}>Se connecter</Link>
-            </div>
+    return (
+      <div className={styles.header}>
+        <div
+          className={styles.header_main}
+          style={
+            menu
+              ? { borderBottom: '2px #ebebeb solid' }
+              : { borderBottom: '2px #ffffff solid' }
+          }
+        >
+          <p>Merciki</p>
+          <i
+            className={
+              menu ? 'fa-solid fa-xmark fa-2xl' : 'fa-solid fa-bars fa-2xl'
+            }
+            onClick={() => setMenu(!menu)}
+          ></i>
         </div>
-    )
+        <div
+          className={styles.header_menu}
+          style={menu ? { height: '13rem' } : { height: '0%' }}
+        >
+          <div className={styles.header_menu_top}>
+            <Link className={styles.black}>Items</Link>
+            <Link className={styles.black}>Services</Link>
+            <Link className={styles.black}>Groupes</Link>
+          </div>
+          <div className={styles.header_menu_bot}>
+            <Link className={styles.header_menu_bot_signUp}>Sign in</Link>
+            <Link className={styles.header_menu_bot_signIn}>Log in</Link>
+          </div>
+        </div>
+      </div>
+    );
 }

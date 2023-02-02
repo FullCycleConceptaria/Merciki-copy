@@ -1,5 +1,7 @@
-import Footer from "../../components/Footer/Footer";
+import HeroHeader from "../../components/HeroHeader/HeroHeader";
 
 export default function Home() {
-  return <h1>home</h1>;
+  return (
+    <HeroHeader />
+  );
 }

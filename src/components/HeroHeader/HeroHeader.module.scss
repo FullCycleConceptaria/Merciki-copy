@@ -1,0 +1,21 @@
+@import '../../assets/styles/variables';
+
+.heroHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  background: url(../../assets/img/milad-fakurian-j6IEwWmiWtk-unsplash.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 7rem;
+  &_inspiringSentence {
+    font-size: 3rem;
+    color: $white;
+    margin: 7rem 3rem 0 3rem;
+    & span {
+      font-size: 2rem;
+    }
+  }
+}

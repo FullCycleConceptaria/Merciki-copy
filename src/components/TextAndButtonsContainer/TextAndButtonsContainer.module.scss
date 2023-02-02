@@ -1,0 +1,47 @@
+@import '../../assets/styles/variables';
+
+.container {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: rgba(38, 38, 38, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(38, 38, 38, 1);
+  color: $white;
+  &_title {
+    font-size: 2rem;
+  }
+  &_description {
+    margin-top: 0.7rem;
+    font-size: 1.15rem;
+    font-family: $Poppins;
+  }
+  &_buttons {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 1.3rem;
+    &_button {
+      width: 10rem;
+      text-align: center;
+      background: $green;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.5s;
+      color: $white;
+      text-decoration: none;
+      font-weight: 500;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
