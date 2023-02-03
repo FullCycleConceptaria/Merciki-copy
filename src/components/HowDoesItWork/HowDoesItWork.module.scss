@@ -2,7 +2,7 @@
 
 .howDoesItWorkContainer {
   background: $black;
-  margin-top: 5rem;
+  margin: 5rem 0 -2rem 0;
   padding: 2rem;
   color: $white;
   &_title {
@@ -16,6 +16,7 @@
     & span {
       font-weight: 600;
       color: $white;
+      line-height: 5rem;
     }
   }
 }
