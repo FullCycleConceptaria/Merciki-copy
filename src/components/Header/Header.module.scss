@@ -4,6 +4,7 @@
   width: 45rem;
   height: 6rem;
   position: fixed;
+  z-index: 1000;
   &_main {
     display: flex;
     align-items: center;

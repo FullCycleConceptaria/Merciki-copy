@@ -1,0 +1,21 @@
+@import '../../assets/styles/variables';
+
+.howDoesItWorkContainer {
+  background: $black;
+  margin-top: 5rem;
+  padding: 2rem;
+  color: $white;
+  &_title {
+    font-size: 3rem;
+  }
+  &_text {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-family: $Poppins;
+    color: $grey;
+    & span {
+      font-weight: 600;
+      color: $white;
+    }
+  }
+}
