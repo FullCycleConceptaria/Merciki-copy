@@ -1,5 +1,5 @@
 import styles from './Reasons.module.scss';
-import EachReason from '../EachReason/EachReason';
+import BoxWithTextAndImage from '../BoxWithTextAndImage/BoxWithTextAndImage';
 import profits from '../../assets/img/profits.png';
 import earth from '../../assets/img/planet-earth.png';
 import house from '../../assets/img/house.png';
@@ -10,19 +10,19 @@ export default function Reasons() {
       <p className={styles.reasons_title}>
         Three good reasons to join <span>Merciki</span> !
       </p>
-      <EachReason
+      <BoxWithTextAndImage
         src={profits}
         alt='money image'
         title={`Here, money doesn't exist`}
         description='On Merciki, All exchanges are based on points called Mercis. No need to touch your wallet !'
       />
-      <EachReason
+      <BoxWithTextAndImage
         src={earth}
         alt='earth image'
         title='Protect the environment'
         description='Thousands of objects have found a second life on Merciki. That means tons of waste and CO2 emissions avoided !'
       />
-      <EachReason
+      <BoxWithTextAndImage
         src={house}
         alt='house image'
         title='Helping each other out'
