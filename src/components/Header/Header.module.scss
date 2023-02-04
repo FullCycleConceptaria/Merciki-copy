@@ -4,7 +4,9 @@
   width: 45rem;
   height: 6rem;
   position: fixed;
+  z-index: 1000;
   &_main {
+    border-bottom: 2px #ebebeb solid;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,6 +23,7 @@
     }
   }
   &_menu {
+    border-bottom: 2px #ebebeb solid;
     display: flex;
     flex-direction: column;
     position: absolute;
