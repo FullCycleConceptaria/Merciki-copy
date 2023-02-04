@@ -1,4 +1,5 @@
 import styles from './JoinCommunity.module.scss';
+import { Link } from 'react-router-dom';
 
 export default function JoinCommunity() {
   return (
@@ -8,7 +9,7 @@ export default function JoinCommunity() {
       <p className={styles.joinCommunity_description}>
       You will be able to exchange them for objects or services offered by other
       Merciki members</p>
-      <div className={styles.joinCommunity_button}>Sign up</div>
+      <Link className={styles.joinCommunity_button}>Sign up</Link>
     </div>
   );
 }

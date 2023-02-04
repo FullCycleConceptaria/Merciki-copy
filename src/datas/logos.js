@@ -1,4 +1,15 @@
-import LaUne from '../assets/img/LaUne.svg'
+import LaUne from '../assets/img/LaUne.svg';
+import RTLTVI from '../assets/img/RTLTVI.png';
+import LeSoir from '../assets/img/LeSoir.png';
+import Avenir from '../assets/img/AvenirLogo.jpg';
+import Vivacite from '../assets/img/Vivacite.svg';
+import Metro from '../assets/img/JournalMétro.png';
+import Contact from '../assets/img/RadioContact.svg';
+import Femmes from '../assets/img/femmes.png';
+import LaPremiere from '../assets/img/LaPremière.svg';
+import Flair from '../assets/img/Flair.png';
+import LeVif from '../assets/img/LeVif.svg';
+import RTBFBE from '../assets/img/RTBFBE.png';
 
 export const logos = [
   {
@@ -6,47 +17,47 @@ export const logos = [
     alt: 'La Une',
   },
   {
-    src: '../assets/img/RTLTVI.svg',
+    src: RTLTVI,
     alt: 'RTL TVI',
   },
   {
-    src: '../assets/img/LeSoir.svg',
+    src: LeSoir,
     alt: 'Le Soir',
   },
   {
-    src: '../assets/img/AvenirLogo.jpg',
+    src: Avenir,
     alt: `L'avenir`,
   },
   {
-    src: '../assets/img/Vivacite.svg',
+    src: Vivacite,
     alt: 'Vivacité',
   },
   {
-    src: '../assets/img/JournalMétro.svg',
+    src: Metro,
     alt: 'Metro',
   },
   {
-    src: '../assets/img/RadioContact.svg',
+    src: Contact,
     alt: 'Radio Conteact',
   },
   {
-    src: '../assets/img/femmes.png',
+    src: Femmes,
     alt: `Femmes d'auhourd'hui`,
   },
   {
-    src: '../assets/img/LaPremière.svg',
+    src: LaPremiere,
     alt: 'La Première',
   },
   {
-    src: '../assets/img/Flair.png',
+    src: Flair,
     alt: 'Flair',
   },
   {
-    src: '../assets/img/LeVif.svg',
+    src: LeVif,
     alt: 'Le Vif',
   },
   {
-    src: '../assets/img/RTBFBE.svg',
+    src: RTBFBE,
     alt: 'RTBF.BE',
   },
 ];
