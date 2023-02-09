@@ -7,7 +7,9 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.header_main}>
-        <p>Merciki</p>
+        <Link to='/home' className={styles.header_main_title}>
+          Merciki
+        </Link>
         <i
           className={
             menu ? 'fa-solid fa-xmark fa-2xl' : 'fa-solid fa-bars fa-2xl'
@@ -20,9 +22,27 @@ export default function Header() {
         style={menu ? { height: '13rem' } : { height: '0%' }}
       >
         <div className={styles.header_menu_top}>
-          <Link className={styles.black}>Items</Link>
-          <Link className={styles.black}>Services</Link>
-          <Link className={styles.black}>Groups</Link>
+          <Link
+            className={styles.black}
+            to='/items'
+            onClick={() => setMenu(!menu)}
+          >
+            Items
+          </Link>
+          <Link
+            className={styles.black}
+            to='/services'
+            onClick={() => setMenu(!menu)}
+          >
+            Services
+          </Link>
+          <Link
+            className={styles.black}
+            to='/groups'
+            onClick={() => setMenu(!menu)}
+          >
+            Groups
+          </Link>
         </div>
         <div className={styles.header_menu_bot}>
           <Link className={styles.header_menu_bot_signUp}>Sign up</Link>

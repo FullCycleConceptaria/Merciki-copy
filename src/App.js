@@ -25,7 +25,9 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <Outlet />
+      <div className='main'>
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
