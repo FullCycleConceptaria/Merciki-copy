@@ -7,7 +7,11 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.header_main}>
-        <Link to='/home' className={styles.header_main_title}>
+        <Link
+          to='/home'
+          className={styles.header_main_title}
+          onClick={() => setMenu(false)}
+        >
           Merciki
         </Link>
         <i
@@ -25,21 +29,21 @@ export default function Header() {
           <Link
             className={styles.black}
             to='/items'
-            onClick={() => setMenu(!menu)}
+            onClick={() => setMenu(false)}
           >
             Items
           </Link>
           <Link
             className={styles.black}
             to='/services'
-            onClick={() => setMenu(!menu)}
+            onClick={() => setMenu(false)}
           >
             Services
           </Link>
           <Link
             className={styles.black}
             to='/groups'
-            onClick={() => setMenu(!menu)}
+            onClick={() => setMenu(false)}
           >
             Groups
           </Link>
