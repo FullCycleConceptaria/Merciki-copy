@@ -1,0 +1,23 @@
+@import '../../assets/styles/variables';
+
+.itemsServicesGroups {
+  width: 40%;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
+  &_img{
+    width: 100%;
+  }
+  &_text{
+    padding: 1rem;
+    &_title{
+      font-size: 2rem;
+    }
+    &_para{
+      margin-top: .5rem;
+      font-family: $Poppins;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+  }
+}

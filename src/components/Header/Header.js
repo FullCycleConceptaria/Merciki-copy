@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 
 export default function Header() {
@@ -26,31 +26,31 @@ export default function Header() {
         style={menu ? { height: '13rem' } : { height: '0%' }}
       >
         <div className={styles.header_menu_top}>
-          <Link
+          <NavLink
             className={styles.black}
             to='/items'
             onClick={() => setMenu(false)}
           >
             Items
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             className={styles.black}
             to='/services'
             onClick={() => setMenu(false)}
           >
             Services
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             className={styles.black}
             to='/groups'
             onClick={() => setMenu(false)}
           >
             Groups
-          </Link>
+          </NavLink>
         </div>
         <div className={styles.header_menu_bot}>
-          <Link className={styles.header_menu_bot_signUp}>Sign up</Link>
-          <Link className={styles.header_menu_bot_signIn}>Log in</Link>
+          <p className={styles.header_menu_bot_signUp}>Sign up</p>
+          <p className={styles.header_menu_bot_signIn}>Log in</p>
         </div>
       </div>
     </div>

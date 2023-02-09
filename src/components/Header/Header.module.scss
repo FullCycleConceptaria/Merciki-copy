@@ -37,11 +37,13 @@
     transition: all 0.5s;
     overflow: hidden;
     font-family: $Poppins;
-    & a {
+    & a,
+    p {
       text-decoration: none;
       font-weight: 500;
       font-size: 2rem;
       transition: all 0.5s;
+      padding: 0 .5rem;
     }
     &_top {
       margin-top: 1rem;
@@ -86,4 +88,9 @@
       }
     }
   }
+}
+
+a.active {
+  color: $blue;
+  font-weight: 700;
 }
