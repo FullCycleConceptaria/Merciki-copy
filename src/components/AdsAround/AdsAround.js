@@ -1,15 +1,11 @@
+import { useLocation } from '../../hooks/useLocation';
 import styles from './AdsAround.module.scss';
 
 export default function AdsAround() {
-  // let position;
-  // if (navigator.geolocation) {
-  //   position = navigator.geolocation.getCurrentPosition();
-  // } else {
-  //   position = 'error lol';
-  // }
+  const position = useLocation()
   return (
     <div className={styles.adsAround}>
-      <p>Announcements around</p>
+      <p>Announcements in {position}</p>
     </div>
   );
 }
