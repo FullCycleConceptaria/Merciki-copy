@@ -2,7 +2,7 @@ import './default.scss';
 
 import { useNavigate, Outlet } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
-// import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -13,18 +13,20 @@ import { useModale } from './hooks/useModale';
 function App() {
   const [modale, handleClick] = useModale();
 
-  modale ? disableScroll(document) : enableScroll(document);
-  function prevent(e) {
-    e.preventDefault();
-    // console.log(e.defaultPrevented);
-  }
-  function disableScroll(el) {
-    //console.log(el);
-    el.addEventListener('scroll', prevent);
-  }
-  function enableScroll(el) {
-    el.removeEventListener('scroll', prevent);
-  }
+  modale ? disableBodyScroll(document) : enableBodyScroll(document);
+
+  // modale ? disableScroll(document) : enableScroll(document);
+  // function prevent(e) {
+  //   e.preventDefault();
+  //   // console.log(e.defaultPrevented);
+  // }
+  // function disableScroll(el) {
+  //   //console.log(el);
+  //   el.addEventListener('scroll', prevent);
+  // }
+  // function enableScroll(el) {
+  //   el.removeEventListener('scroll', prevent);
+  // }
 
   const navigate = useNavigate();
   useEffect(() => {
