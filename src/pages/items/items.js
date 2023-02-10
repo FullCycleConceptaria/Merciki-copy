@@ -21,6 +21,7 @@ export default function Items() {
             src={categorie.src}
             title={categorie.title}
             text={categorie.text}
+            key={crypto.randomUUID()}
           />
         ))}
       </div>
