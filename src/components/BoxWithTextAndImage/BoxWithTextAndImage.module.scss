@@ -3,7 +3,7 @@
 .reasonContainer {
   margin-top: 2.5rem;
   padding: 1.5rem;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
   color: $black;
   &_header {
@@ -13,7 +13,7 @@
     &_img {
       width: 8rem;
       height: 8rem;
-      border-radius: 1rem;
+      border-radius: .5rem;
       background: $darkWhite;
       padding: 1rem;
     }

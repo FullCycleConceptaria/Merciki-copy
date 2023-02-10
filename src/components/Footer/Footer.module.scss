@@ -35,9 +35,20 @@
       text-decoration: none;
       color: $lightGreen;
       font-weight: 500;
+      cursor: pointer;
       &:hover {
         text-decoration: underline;
       }
     }
+  }
+}
+
+.footer_link {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: $lightGreen;
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
   }
 }
