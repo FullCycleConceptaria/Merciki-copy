@@ -27,7 +27,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  max-width: 45rem;
+  width: 45rem;
   background-color: $white;
   overflow-y: scroll;
   &::-webkit-scrollbar {
@@ -53,4 +53,14 @@ body {
   &:hover {
     transform: scale(1);
   }
+}
+
+.backgroundModale{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background: #00000057;
+  z-index: 9999;
 }

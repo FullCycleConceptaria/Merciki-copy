@@ -5,8 +5,13 @@ import { useEffect } from 'react';
 
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer';
+import LogIn from './components/LogIn/LogIn';
+import SignUp from './components/SignUp/SignUp';
+import { useModale } from './hooks/useModale';
 
 function App() {
+  const [modale, handleClick] = useModale();
+
   const navigate = useNavigate();
   useEffect(() => {
     const storage = localStorage;
@@ -24,11 +29,19 @@ function App() {
   }, []);
   return (
     <div className='App'>
-      <Header />
+      <LogIn modale={modale}/>
+      {modale && (
+        <div className='backgroundModale' onClick={() => handleClick(false)}></div>
+      )}
+      <SignUp modale={modale}/>
+      {modale && (
+        <div className='backgroundModale' onClick={() => handleClick(false)}></div>
+      )}
+      <Header onClick={handleClick}/>
       <div className='main'>
         <Outlet />
       </div>
-      <Footer />
+      <Footer onClick={handleClick} />
     </div>
   );
 }

@@ -70,6 +70,8 @@
         box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
         border-radius: 0.5rem;
         color: $blue;
+        cursor: pointer;
+        user-select: none;
         &:hover {
           transform: scale(1.05);
         }
@@ -82,6 +84,8 @@
         box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
         border-radius: 0.5rem;
         color: $white;
+        cursor: pointer;
+        user-select: none;
         &:hover {
           transform: scale(1.05);
         }

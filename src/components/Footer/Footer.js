@@ -2,7 +2,7 @@ import styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-export default function Footer() {
+export default function Footer({onClick}) {
   const [link1, setLink1] = useState(false);
   const [link2, setLink2] = useState(false);
   const [link3, setLink3] = useState(false);
@@ -58,8 +58,11 @@ export default function Footer() {
         </p>
         {link3 && (
           <>
-            <Link>Sign up</Link>
-            <Link>Log in</Link>
+            <a className={styles.footer_link}>Sign up</a>
+            <a onClick={() => {
+            onClick(true)
+            }}
+            className={styles.footer_link}>Log in</a>
           </>
         )}
       </div>

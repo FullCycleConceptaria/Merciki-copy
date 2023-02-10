@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 
-export default function Header() {
+export default function Header({onClick}) {
   const [menu, setMenu] = useState(false);
   return (
     <div className={styles.header}>
@@ -50,7 +50,11 @@ export default function Header() {
         </div>
         <div className={styles.header_menu_bot}>
           <p className={styles.header_menu_bot_signUp}>Sign up</p>
-          <p className={styles.header_menu_bot_signIn}>Log in</p>
+          <p onClick={() => {
+            onClick(true)
+            setMenu(false)
+          }}
+          className={styles.header_menu_bot_signIn}>Log in</p>
         </div>
       </div>
     </div>
