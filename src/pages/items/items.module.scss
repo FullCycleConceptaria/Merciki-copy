@@ -1,0 +1,11 @@
+@import '../../assets/styles/variables';
+
+.allItems {
+  margin-top: 2rem;
+  display: flex;
+  font-display: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: fit-content;
+  padding: 0 5%;
+}
