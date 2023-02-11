@@ -1,7 +1,7 @@
 import './default.scss';
 
 import { useNavigate, Outlet } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 // import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 import Header from './components/Header/Header';

@@ -5,11 +5,14 @@ export default function LogIn({ modale }) {
   useEffect(() => {
     if (modale) {
       window.addEventListener('wheel', prevent,{passive:false});
+      window.addEventListener('scroll', prevent,{passive:false});
     } else {
       window.removeEventListener('wheel', prevent);
+      window.removeEventListener('scroll', prevent);
     }
     return () => {
       window.removeEventListener('wheel', prevent);
+      window.removeEventListener('scroll', prevent);
     };
   }, [modale]);
 
