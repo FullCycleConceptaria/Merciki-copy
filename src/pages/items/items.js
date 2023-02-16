@@ -3,9 +3,8 @@ import styles from './items.module.scss';
 import JoinCommunity from '../../components/JoinCommunity/JoinCommunity';
 import AdsAround from '../../components/AdsAround/AdsAround';
 import SearchBar from '../../components/SearchBar/SearchBar';
-import ItemsServicesGroups from '../../components/ItemsServicesGroups/ItemsServicesGroups';
-import { itemsCategories } from '../../datas/itemsCategories';
 import { useEffect } from 'react';
+import { Outlet } from 'react-router-dom';
 
 export default function Items() {
   useEffect(() => {
@@ -16,14 +15,7 @@ export default function Items() {
       <AdsAround />
       <SearchBar />
       <div className={styles.allItems}>
-        {itemsCategories.map((categorie) => (
-          <ItemsServicesGroups
-            src={categorie.src}
-            title={categorie.title}
-            text={categorie.text}
-            key={crypto.randomUUID()}
-          />
-        ))}
+        <Outlet />
       </div>
       <JoinCommunity />
     </>
