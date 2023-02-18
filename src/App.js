@@ -2,7 +2,6 @@ import './default.scss';
 
 import { useNavigate, Outlet } from 'react-router-dom';
 import { useEffect } from 'react';
-// import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -11,6 +10,10 @@ import { useModale } from './hooks/useModale';
 
 function App() {
   const [modale, modaleVariant, handleClick] = useModale();
+import { useModale } from './hooks/useModale';
+
+function App() {
+  const [modale, handleClick] = useModale();
   const navigate = useNavigate();
   useEffect(() => {
     const storage = localStorage;
