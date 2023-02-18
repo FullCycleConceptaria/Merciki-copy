@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import LogIn from './components/LogIn/LogIn';
 import { useModale } from './hooks/useModale';
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
   }, []);
   return (
     <div className='App'>
-      <LogIn modale={modale} />
       {modale && (
         <div
           className='backgroundModale'
