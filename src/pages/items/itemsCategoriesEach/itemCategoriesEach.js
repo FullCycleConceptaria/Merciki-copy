@@ -5,11 +5,9 @@ import { useEffect } from 'react';
 
 export default function ItemCategoriesEach() {
   const { link } = useParams();
-  console.log(link);
   useEffect(() => {
-    const obj = itemsCategories.find((user) => user.link === link );
-    console.log(obj);
-  }, [link])
+    const obj = itemsCategories.find((user) => user.link === link);
+  }, [link]);
   return (
     <p>hello {link}</p>
   );
