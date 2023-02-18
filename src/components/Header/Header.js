@@ -49,9 +49,13 @@ export default function Header({onClick}) {
           </NavLink>
         </div>
         <div className={styles.header_menu_bot}>
-          <p className={styles.header_menu_bot_signUp}>Sign up</p>
           <p onClick={() => {
-            onClick(true)
+            onClick(true, 'signUp')
+            setMenu(false)
+          }} 
+          className={styles.header_menu_bot_signUp}>Sign up</p>
+          <p onClick={() => {
+            onClick(true, 'logIn')
             setMenu(false)
           }}
           className={styles.header_menu_bot_signIn}>Log in</p>

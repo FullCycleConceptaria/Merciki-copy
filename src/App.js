@@ -5,6 +5,11 @@ import { useEffect } from 'react';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Modale from './components/Modale/Modale';
+import { useModale } from './hooks/useModale';
+
+function App() {
+  const [modale, modaleVariant, handleClick] = useModale();
 import { useModale } from './hooks/useModale';
 
 function App() {
@@ -26,6 +31,7 @@ function App() {
   }, []);
   return (
     <div className='App'>
+      <Modale modaleVariant={modaleVariant} modale={modale} onClick={handleClick}/>
       {modale && (
         <div
           className='backgroundModale'
