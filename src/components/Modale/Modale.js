@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import styles from './Modale.module.scss';
-import '../../datas/userDatas';
 import { useModaleFunctions } from '../../hooks/useModaleFunctions';
 
 export default function Modale({ modale, modaleVariant, onClick }) {
@@ -56,7 +55,7 @@ export default function Modale({ modale, modaleVariant, onClick }) {
               <span>Reset password</span>
             </p>
             <p>
-              No account?{' '}
+              No account?
               <span onClick={() => onClick(true, 'signUp')}>Create one</span>
             </p>
           </div>
