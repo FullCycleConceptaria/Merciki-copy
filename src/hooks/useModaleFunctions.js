@@ -11,6 +11,10 @@ export function useModaleFunctions() {
     email: '',
     password: '',
   });
+  const [error, setError] = useState({
+    email: false, 
+    password: false,
+  });
 
   function prevent(e) {
     console.log('prevent');
@@ -26,11 +30,16 @@ export function useModaleFunctions() {
       navigate('/feed');
       onClick(false);
       //storage.setItem('isLoggedIn', 'true');
+    } else {
+      setError({
+        email: inputs.email !== userDatas[0].email ? true : false,
+        password: inputs.password !== userDatas[0].password ? true : false,
+      });
     }
   }
 
   function handleInput(e) {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   }
-  return [prevent, handleSubmit, handleInput, inputs];
+  return [prevent, handleSubmit, handleInput, inputs, setInputs, error, setError];
 }

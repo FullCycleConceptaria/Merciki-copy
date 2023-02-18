@@ -3,8 +3,16 @@ import styles from './Modale.module.scss';
 import { useModaleFunctions } from '../../hooks/useModaleFunctions';
 
 export default function Modale({ modale, modaleVariant, onClick }) {
-  const [prevent, handleSubmit, handleInput, inputs] = useModaleFunctions()
-  
+  const [
+    prevent,
+    handleSubmit,
+    handleInput,
+    inputs,
+    setInputs,
+    error,
+    setError,
+  ] = useModaleFunctions();
+
   useEffect(() => {
     if (modale) {
       window.addEventListener('wheel', prevent, { passive: false });
@@ -22,6 +30,21 @@ export default function Modale({ modale, modaleVariant, onClick }) {
     };
   }, [modale]);
 
+  useEffect(() => {
+    modale === false &&
+      setInputs({
+        name: '',
+        surname: '',
+        username: '',
+        email: '',
+        password: '',
+      });
+    setError({
+      email: false,
+      password: false,
+    });
+  }, [modale]);
+
   return (
     <div
       className={styles.modale}
@@ -33,22 +56,36 @@ export default function Modale({ modale, modaleVariant, onClick }) {
     >
       {modaleVariant === 'logIn' && (
         <>
-          <form>
+          <form onSubmit={(e) => handleSubmit(e, onClick)}>
+            {error.email && <div className={styles.error}>Email not valid</div>}
             <input
               type='text'
               placeholder='Email'
               name='email'
-              value={inputs.email}
+              autoComplete='on'
+              value={modale ? inputs.email : ''}
               onInput={handleInput}
+              style={
+                error.email
+                  ? { border: 'solid #a34a21 .25rem' }
+                  : { border: 'solid #262626 .25rem' }
+              }
             />
+            {error.password && <div className={styles.error}>Password not valid</div>}
             <input
               type='password'
               placeholder='Password'
               name='password'
-              value={inputs.password}
+              autoComplete='on'
+              value={modale ? inputs.password : ''}
               onInput={handleInput}
+              style={
+                error.password
+                  ? { border: 'solid #a34a21 .25rem' }
+                  : { border: 'solid #262626 .25rem' }
+              }
             />
-            <button onClick={(e) => handleSubmit(e, onClick)}>Log in</button>
+            <button>Log in</button>
           </form>
           <div className={styles.modalePlus}>
             <p>
@@ -68,12 +105,20 @@ export default function Modale({ modale, modaleVariant, onClick }) {
               <input
                 className={styles.formSignUpName}
                 type='text'
-                placeholder='First Name'
+                placeholder='Name'
+                name='name'
+                autoComplete='on'
+                value={modale ? inputs.name : ''}
+                onInput={handleInput}
               />
               <input
                 className={styles.formSignUpName}
                 type='text'
-                placeholder='Last Name'
+                placeholder='Surname'
+                name='surname'
+                autoComplete='on'
+                value={modale ? inputs.surname : ''}
+                onInput={handleInput}
               />
             </div>
             <input type='text' placeholder='Username' />
@@ -81,14 +126,16 @@ export default function Modale({ modale, modaleVariant, onClick }) {
               type='text'
               placeholder='Email'
               name='email'
-              value={inputs.email}
+              autoComplete='on'
+              value={modale ? inputs.email : ''}
               onInput={handleInput}
             />
             <input
               type='password'
               placeholder='Password'
               name='password'
-              value={inputs.password}
+              autoComplete='on'
+              value={modale ? inputs.password : ''}
               onInput={handleInput}
             />
             <button>Sign up</button>
