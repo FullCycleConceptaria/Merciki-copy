@@ -44,9 +44,9 @@
             color: $white;
             width: 100%;
             height: 4rem;
-            border: solid $black .25rem;
             border-radius: .5rem;
-            background-color: $black;
+            background-color: $blue;
+            border: none;
             transition: all .2s;
             &:hover{
                 cursor: pointer;
@@ -90,9 +90,9 @@
             color: $white;
             width: 100%;
             height: 4rem;
-            border: solid $black .25rem;
             border-radius: .5rem;
-            background-color: $black;
+            background-color: $blue;
+            border: none;
             transition: all .2s;
             &:hover{
                 cursor: pointer;
