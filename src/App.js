@@ -10,10 +10,6 @@ import { useModale } from './hooks/useModale';
 
 function App() {
   const [modale, modaleVariant, handleClick] = useModale();
-import { useModale } from './hooks/useModale';
-
-function App() {
-  const [modale, handleClick] = useModale();
   const navigate = useNavigate();
   useEffect(() => {
     const storage = localStorage;
