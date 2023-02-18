@@ -10,7 +10,7 @@ import Modale from './components/Modale/Modale';
 import { useModale } from './hooks/useModale';
 
 function App() {
-  const [modale, handleClick] = useModale();
+  const [modale, modaleVariant, handleClick] = useModale();
   const navigate = useNavigate();
   useEffect(() => {
     const storage = localStorage;
@@ -28,7 +28,7 @@ function App() {
   }, []);
   return (
     <div className='App'>
-      <Modale modale={modale} onClick={handleClick}/>
+      <Modale modaleVariant={modaleVariant} modale={modale} onClick={handleClick}/>
       {modale && (
         <div
           className='backgroundModale'

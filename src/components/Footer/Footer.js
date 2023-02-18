@@ -58,9 +58,12 @@ export default function Footer({onClick}) {
         </p>
         {link3 && (
           <>
-            <a className={styles.footer_link}>Sign up</a>
             <a onClick={() => {
-            onClick(true)
+            onClick(true, 'signUp')
+            }} 
+            className={styles.footer_link }>Sign up</a>
+            <a onClick={() => {
+            onClick(true, 'logIn')
             }}
             className={styles.footer_link}>Log in</a>
           </>

@@ -2,8 +2,10 @@ import { useState } from "react";
 
 export function useModale(){
   const [modale, setModale] = useState(false);
-  function handleClick(state){
+  const [modaleVariant, setModaleVariant] = useState('');
+  function handleClick(state, modaleState){
     setModale(state);
+    setModaleVariant(modaleState);
   }
-  return [modale, handleClick];
+  return [modale, modaleVariant, handleClick];
 }
