@@ -1,6 +1,6 @@
 import './default.scss';
 
-import { useNavigate, Outlet } from 'react-router-dom';
+import { useNavigate, Outlet, ScrollRestoration } from 'react-router-dom';
 import { useEffect } from 'react';
 
 import Header from './components/Header/Header';
@@ -27,7 +27,11 @@ function App() {
   }, []);
   return (
     <div className='App'>
-      <Modale modaleVariant={modaleVariant} modale={modale} onClick={handleClick}/>
+      <Modale
+        modaleVariant={modaleVariant}
+        modale={modale}
+        onClick={handleClick}
+      />
       {modale && (
         <div
           className='backgroundModale'
@@ -39,6 +43,7 @@ function App() {
         <Outlet />
       </div>
       <Footer onClick={handleClick} />
+      <ScrollRestoration smooth />
     </div>
   );
 }
