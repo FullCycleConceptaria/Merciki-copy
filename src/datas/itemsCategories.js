@@ -1,61 +1,73 @@
+import pig from '../assets/img/thumbnail/pig.jpg';
+import house from '../assets/img/thumbnail/house.jpg';
+import clothes from '../assets/img/thumbnail/clothes.jpg';
+import books from '../assets/img/thumbnail/books.jpg';
+import horse from '../assets/img/thumbnail/horse.jpg';
+import child from '../assets/img/thumbnail/child.jpg';
+import gameboy from '../assets/img/thumbnail/gameboy.jpg';
+import sport from '../assets/img/thumbnail/sport.jpg';
+import soap from '../assets/img/thumbnail/soap.jpg';
+import fruit from '../assets/img/thumbnail/fruit.jpg';
+
+
 export const itemsCategories = [
   {
     link: 'good_deals',
-    src: 'https://images.unsplash.com/photo-1607863680198-23d4b2565df0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    src: pig,
     title: 'Good deals',
     text: 'Treat yourself by spending a single Merci',
   },
   {
     link: 'house',
-    src: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+    src: house,
     title: 'House',
     text: 'Treat yourself by spending a single Merci',
   },
   {
     link: 'clothes_andaccessories',
-    src: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
+    src: clothes,
     title: 'Clothes and accessories',
     text: 'Clothes, shoes, for adults and children',
   },
   {
     link: 'reading',
-    src: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80',
+    src: books,
     title: 'Reading',
     text: 'Books, comics, magazines',
   },
   {
     link: 'games_and_toy',
-    src: 'https://images.unsplash.com/photo-1528107583409-fbd56547bb28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80',
+    src: horse,
     title: 'Games and toys',
     text: 'Video and board game',
   },
   {
     link: 'childcare',
-    src: 'https://images.unsplash.com/photo-1595930013415-ca6958dc8a8a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    src: child,
     title: 'Childcare',
     text: 'Child clothing, accessories, banners, strollers...',
   },
   {
     link: 'multimedia',
-    src: 'https://images.unsplash.com/photo-1612960485149-631556cb148b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80',
+    src: gameboy,
     title: 'Multimedia and electronics',
     text: 'Phone, computeur, picture, videos...',
   },
   {
     link: 'sport',
-    src: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    src: sport,
     title: 'Sport',
     text: 'Equipment, clothes, material...',
   },
   {
     link: 'self_care',
-    src: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    src: soap,
     title: 'Self Care',
     text: 'Shampoo, soap, make-up...',
   },
   {
     link: 'food',
-    src: 'https://images.unsplash.com/photo-1610348725531-843dff563e2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    src: fruit,
     title: 'Food',
     text: 'Fruits and vegetables',
   },
